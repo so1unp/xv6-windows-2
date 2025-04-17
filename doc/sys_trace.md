@@ -34,7 +34,7 @@ int sys_trace(void) {
 ---
 
 ## 3. **Registro en la tabla de llamadas al sistema**
-En el archivo `syscall.c` la función `sys_trace` se registra en una tabla de llamadas al sistema (`syscalls[]`), donde se asocia el identificador `SYS_trace` con la función `sys_trace`:
+si` la función `sys_trace` se registra en una tabla de llamadas al sistema (`syscalls[]`), donde se asocia el identificador `SYS_trace` con la función `sys_trace`:
 
 ```c
 extern int sys_trace(void);

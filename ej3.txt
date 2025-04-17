@@ -1,0 +1,34 @@
+sys_read  |	El shell (sh)         |	Espera entrada del usuario
+sys_fork  |	El shell	          | Crea proceso hijo para ejecutar echo
+sys_sbrk  |	El nuevo proceso hijo | Reserva memoria para el nuevo programa
+sys_exec  |	El hijo               |	Reemplaza su código por el del programa echo
+sys_write |	echo	              | Imprime "hola" letra por letra
+sys_wait  |	El shell              |	Espera que el proceso hijo termine
+sys_write |(últimos)	El shell  |	Imprime el prompt de nuevo ($)
+
+
+
+salida:
+echo hola
+[5] sys_read: 1
+[5] sys_read: 1
+[5] sys_read: 1
+[5] sys_read: 1
+[5] sys_read: 1
+[5] sys_read: 1
+[5] sys_read: 1
+[5] sys_read: 1
+[5] sys_read: 1
+[5] sys_read: 1
+[1] sys_fork: 4
+[12] sys_sbrk: 16384
+[7] sys_exec: 0
+h[16] sys_write: 1
+o[16] sys_write: 1
+l[16] sys_write: 1
+a[16] sys_write: 1
+
+[16] sys_write: 1
+[3] sys_wait: 4
+$[16] sys_write: 1
+ [16] sys_write: 1
